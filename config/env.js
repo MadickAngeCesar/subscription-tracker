@@ -1,5 +1,6 @@
-import { config } from 'dotenv';
+import { config } from "dotenv";
 
-config({path: `.env.${process.env.NODE_ENV || 'development'}`});
+config({ path: `.env.${process.env.NODE_ENV || "development"}` });
 
-export const { PORT, NODE_ENV, MONGODB_URI } = process.env;
+export const { PORT, NODE_ENV, MONGODB_URI, JWT_SECRET, JWT_EXPIRES_IN } =
+  process.env;

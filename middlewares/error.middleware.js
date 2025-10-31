@@ -22,8 +22,8 @@ const errorMiddleware = (err, req, res, next) => {
         // Mongoose validation error
         if (err.name === 'ValidationError') {
             const messages = Object.values(err.errors).map(val => val.message);
-            const message = `Invalid input data. ${messages.join('. ')}`;
-            error = new Error(message.join('. '));
+            const message = `Invalid input data. ${messages.join(', ')}`;
+            error = new Error(message.join(', '));
             error.statusCode = 400;
         }
 

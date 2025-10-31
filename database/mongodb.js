@@ -8,7 +8,7 @@ if (!MONGODB_URI) {
 const connectToDatabase = async () => {
   try {
     await mongoose.connect(MONGODB_URI);
-    console.log(`Connected to MongoDB at ${MONGODB_URI} in ${NODE_ENV} mode`);
+    console.log(`Connected to MongoDB in ${NODE_ENV} mode`);
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
     process.exit(1);
